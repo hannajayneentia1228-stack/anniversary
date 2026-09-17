@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Mobile -->
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#100b0d">
+
+    <title>bea gwapa web. ❤️</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="style.css">
+</head>
+
+
+<body>
+
+<!-- =====================================================
+     PASSWORD SCREEN
+===================================================== -->
+
+<div id="lockScreen" class="lock-screen">
+
+    <div class="lock-background"></div>
+
+    <div class="lock-content">
+
+        <div class="lock-symbol">
+            ♡
+        </div>
+
+        <p class="eyebrow">
+            A PRIVATE LITTLE PLACE
+        </p>
+
+        <h1>
+            Just for<br>
+            <em>you.</em>
+        </h1>
+
+        <p class="lock-description">
+            There is something waiting inside.
+            Only someone special knows the key.
+        </p>
+
+
+        <div class="password-wrapper">
+
+            <input
+                type="password"
+                id="passwordInput"
+                placeholder="Enter the secret"
+                autocomplete="off"
+            >
+
+            <button
+                onclick="unlock()"
+                class="unlock-button">
+
+                Enter
+
+            </button>
+
+        </div>
+
+
+        <p id="errorMessage"
+           class="error-message">
+
+            mali imo password bing hahah... try again ♡
+
+        </p>
+
+
+        <div class="hint">
+
+            <span>HINT</span>
+
+            <p>
+             SAN O MOKO GIN SUGOT!!!
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     MAIN WEBSITE
+===================================================== -->
+
+<main id="website" class="website hidden">
+
+
+    <!-- Floating particles -->
+    <div class="particles"></div>
+
+
+    <!-- MUSIC -->
+    <audio id="music"
+           loop
+           preload="none">
+
+        <source
+            src="song/song.mp4"
+            type="audio/mpeg">
+
+    </audio>
+
+
+    <button
+        id="musicButton"
+        class="music-button"
+        onclick="toggleMusic()">
+
+        ♫
+        <span>Music</span>
+
+    </button>
+
+
+
+    <!-- =================================================
+         HERO
+    ================================================= -->
+
+    <section class="hero">
+
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+
+            <p class="eyebrow fade-up">
+                A LITTLE SOMETHING
+            </p>
+
+            <h1 class="hero-title fade-up delay-1">
+
+                Happy<br>
+
+                <span>
+                    5th Anniversary
+                </span>
+
+                <br>
+
+                <em>to us!.</em>
+
+            </h1>
+
+
+            <p class="hero-subtitle fade-up delay-2">
+
+                And this is just a small collection
+                of the moments I never want to forget.
+
+            </p>
+
+
+            <a href="#memories"
+               class="explore fade-up delay-3">
+
+                <span>Explore our story</span>
+
+                <b>↓</b>
+
+            </a>
+
+        </div>
+
+
+        <div class="hero-bottom">
+
+            <span>SCROLL TO DISCOVER</span>
+
+        </div>
+
+    </section>
+
+
+<!-- =================================================
+     FLOWER BOUQUET INTRO
+================================================= -->
+
+<section class="bouquet-section">
+
+    <div class="bouquet-wrapper">
+
+        <p class="bouquet-small">A LITTLE SURPRISE FOR YOU ♡</p>
+
+        <h2 class="bouquet-title">
+            Tap the bouquet
+            <br>
+            <em>for you,Babe.</em>
+        </h2>
+
+        <!-- CLOSED BOUQUET -->
+        <div class="bouquet" id="bouquet" onclick="openBouquet()">
+
+            <div class="bouquet-paper"></div>
+
+            <div class="flowers closed-flowers">
+                <span class="flower f1">🌷</span>
+                <span class="flower f2">🌹</span>
+                <span class="flower f3">🌸</span>
+                <span class="flower f4">🌷</span>
+                <span class="flower f5">🌹</span>
+            </div>
+
+            <div class="bouquet-ribbon">
+                ♡
+            </div>
+
+        </div>
+
+        <!-- OPENED BOUQUET -->
+        <div class="opened-bouquet" id="openedBouquet">
+
+            <div class="flower-bunch">
+
+                <span class="big-flower flower-1">🌹</span>
+                <span class="big-flower flower-2">🌷</span>
+                <span class="big-flower flower-3">🌸</span>
+                <span class="big-flower flower-4">🌹</span>
+                <span class="big-flower flower-5">🌺</span>
+                <span class="big-flower flower-6">🌷</span>
+                <span class="big-flower flower-7">🌸</span>
+
+            </div>
+
+            <div class="bouquet-wrap"></div>
+
+            <div class="bouquet-message">
+
+                <p>For the girl I love..</p>
+
+                <h3>
+                    Happy 5th Anniversary,
+                    <br>
+                    <em>Baeee♡</em>
+                </h3>
+
+                <p>
+                    This bouquet may be simple,
+                    but every flower comes with
+                    all my love for you. 🌸
+                </p>
+
+                <p>PS; kani ra ako nabal an nga code nga bouquet beginner pa</p>
+
+            </div>
+
+        </div>
+
+        <p class="tap-hint" id="tapHint">
+            ✦ tap the flowers ✦
+        </p>
+
+    </div>
+
+</section>
+
+    <!-- =================================================
+         MEMORIES
+    ================================================= -->
+
+    <section id="memories"
+             class="memories-section">
+
+        <div class="section-heading">
+
+            <div>
+
+                <p class="eyebrow">
+                   MEMORIES
+                </p>
+
+                <h2>
+                    Moments I<br>
+                    <em>keep close.</em>
+                </h2>
+
+            </div>
+
+            <p>
+                Every picture has a story.
+                These are a few of mine.
+            </p>
+
+        </div>
+
+
+
+        <div class="photo-grid">
+
+
+            <!-- PHOTO 1 -->
+
+            <article class="photo-card large">
+
+                <img
+                    src="bea.jpg"
+                    alt="Our memory">
+
+                <div class="photo-info">
+
+                    <span>01</span>
+
+                    <div>
+
+                        <h3>
+                            Haru Memories
+                        </h3>
+
+                        <p>
+                            A moment worth remembering.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- PHOTO 2 -->
+
+            <article class="photo-card">
+
+                <img
+                    src="images/bing.jpg"
+                    alt="Our memory">
+
+                <div class="photo-info">
+
+                    <span>02</span>
+
+                    <div>
+
+                        <h3>
+                            Your smile
+                        </h3>
+
+                        <p>
+                            Still one of my favorite views.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- PHOTO 3 -->
+
+            <article class="photo-card">
+
+                <img
+                    src="images/us.jpg"
+                    alt="Our memory">
+
+                <div class="photo-info">
+
+                    <span>03</span>
+
+                    <div>
+
+                        <h3>
+                            Just us
+                        </h3>
+
+                        <p>
+                            Nothing fancy. Just happiness.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- PHOTO 4 -->
+
+            <article class="photo-card wide">
+
+                <img
+                    src="jpjj.jpeg"
+                    alt="Our memory">
+
+                <div class="photo-info">
+
+                    <span>04</span>
+
+                    <div>
+
+                        <h3>
+                            One of those days
+                        </h3>
+
+                        <p>
+                            The kind of day I wish I could replay.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- PHOTO 5 -->
+
+            <article class="photo-card">
+
+                <img
+                    src="1staniv.jpeg"
+                    alt="Our memory">
+
+                <div class="photo-info">
+
+                    <span>05</span>
+
+                    <div>
+
+                        <h3>
+                           1ST ANNIVERSARY
+                        </h3>
+
+                        <p>
+                            cutiee!
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- PHOTO 6 -->
+
+            <article class="photo-card">
+
+                <img
+                    src="jj.jpeg"
+                    alt="Our memory">
+
+                <div class="photo-info">
+
+                    <span>06</span>
+
+                    <div>
+
+                        <h3>
+                            First Date Halin LDR
+                        </h3>
+
+                        <p>
+                            bagtik/natchos!
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </section>
+
+
+<!-- =================================================
+     TIMELINE
+================================================= -->
+
+<section class="timeline-section">
+
+    <!-- VIDEO BACKGROUND -->
+    <video class="timeline-video" autoplay muted loop playsinline>
+        <source src="video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- DARK OVERLAY -->
+    <div class="timeline-overlay"></div>
+
+    <div class="section-number">
+        03
+    </div>
+
+    <div class="timeline-title">
+
+        <p class="eyebrow">
+            THE JOURNEY
+        </p>
+
+        <h2>
+            THE RANDOM <br>
+            <em>PICTURE OF US</em>
+        </h2>
+
+    </div>
+
+
+    </section>
+
+
+
+    <!-- =================================================
+         LOVE LETTER
+    ================================================= -->
+
+    <section class="letter-section">
+
+        <div class="letter-card">
+
+            <div class="letter-top">
+
+                <span>
+                    04 / A LETTER
+                </span>
+
+                <span>
+                    ♥
+                </span>
+
+            </div>
+
+
+            <div class="letter-content">
+
+                <p class="letter-small">
+                    Dear Bea Bing Babe,
+                </p>
+
+
+                <h2>
+                    HAPPY 5th<br>
+                    ANNIVERSARY
+                </h2>
+
+
+                <div class="letter-body">
+
+                    <p>
+                       happy half a decade babe! ! 🥹❤️ daw sang san o lang mn ta nag uyabay.
+                       Thank you kaayo sa tanan, love. Salamat kay bisan daghan tag times nga mag away, 
+                       mag misunderstand, or dili magsabtanay, naa gihapon ka ug wala ka ni give up sa atoa. 
+                       Kabalo ko dili ko perfect para saimoha, naa koy mga sala ug mga pagkukulang, pero salamat kay gina sabton
+                        gihapon ko nimo ug ginapalangga bisan lagtokom ko. 
+
+
+                    </p>
+
+                    <p>
+                    I’m really thankful nga ikaw akong na-meet ug ikaw akong kauban hangtod karon. Tanan atong memories,
+                     gikan pa sa una nga gapangaluyag pa ko nimo hangtod karon, i-treasure gyud nako na tanan. Bisan LDR ta,
+                      worth it gihapon kay makatapos kana saimo eskwela kag kaloy an ma successful naka🥺
+                    </p>
+
+                    <p>
+                       unta dili rata hasta diri babe. Daghan pa nga tinuig nga opdanay ta duwa away sunggod pero tani 
+                       nd lang mag abut sa bulagay kay palangga tagid ka babe miski kamaldita saimo haha,damu pa nga challenge
+                        atu ma encounter pero kabalo ko kaya tani PADAYON ONE HINOBA AN HAHAHA
+
+                    <p>
+                       I love you so much, love!❤️
+                        Happy 5th anniversary again digyapon katuo kay daw sang san o lang no More years
+                        , more memories, more away HAHAHA, iloveyouuuu babeee beaako! . 🫶🏻❤️
+                    </p>
+
+                    <p>
+                        More laughs.<br>
+                        More adventures.<br>
+                        More ordinary days that somehow
+                        become extraordinary.
+                    </p>
+
+                    <p class="big-line">
+                        I'm really happy<br>
+                        it's <em>you.</em>
+                    </p>
+
+                </div>
+
+
+                <div class="letter-signature">
+
+                    <span>
+                        With all my heart,
+                    </span>
+
+                    <strong>
+                        HANNA ♥
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         FINAL SURPRISE
+    ================================================= -->
+
+    <section class="final-section">
+
+        <div class="final-content">
+
+            <p class="eyebrow">
+                05 / ONE LAST THING
+            </p>
+
+
+            <h2>
+                ILOVEU<br>
+                <em>MALDITA</em>
+            </h2>
+
+
+            <p class="final-message">
+
+                Thank you for being part of my story.
+
+            </p>
+
+
+            <button
+                class="surprise-button"
+                onclick="showSurprise()">
+
+                pintduta last babe loveu...
+
+            </button>
+
+
+            <div
+                id="surprise"
+                class="surprise">
+
+                <div class="surprise-heart">
+                    ♥
+                </div>
+
+                <p>
+                    If I could choose one person
+                    to make a thousand more memories with,
+                    I'd choose you.(sorry wala ko gift bawi rako maka paldo unta ma appreciate nimo akon gi ubra kag ginpulawan)
+                </p>
+
+                <span>
+                    ♡
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            MADE WITH LOVE
+        </p>
+
+        <span>
+            © 2026
+        </span>
+
+    </footer>
+
+
+</main>
+
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
